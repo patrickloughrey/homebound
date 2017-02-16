@@ -1,0 +1,23 @@
+{
+  "name": "homebound",
+  "version": "1.0.0",
+  "description": "send sms messages to your friends or family and watch the message send in real time as you approach your destination",
+  "main": "index.js",
+  "dependencies": {
+    "twilio": "^2.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickloughrey/homebound.git"
+  },
+  "author": "Patrick Loughrey, Derick Alfaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickloughrey/homebound/issues"
+  },
+  "homepage": "https://github.com/patrickloughrey/homebound#readme"
+}

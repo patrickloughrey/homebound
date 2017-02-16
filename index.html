@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Homebound</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+					<h1 id="logo"><a href="index.html">HomeBound</a></h1>
+					<nav>
+						<ul id="menu">
+							<li id="active"><a href="index.html">Home</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Register</a></li>
+							<li><a href="#">Log In</a></li>
+						</ul>
+					</nav>
+			</div>
+		</header>
+
+
+		<div class="hero">
+			<div class="overlay"></div>
+			<div class="cover" style="background-image: url(images/bg_3.jpg);">
+				<div class="desc">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-5 col-md-5">
+
+								<div class="tabulation animate-box">
+									<div class="content">
+										<div class="row">
+											<form>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field">
+													<label for="from">Origin</label>
+													<input type="text" class="form-control" id="origin" placeholder="1600 Pensylvania Ave"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field">
+													<label for="from">Destination</label>
+													<input type="text" class="form-control" id="dest" placeholder="55 Smith Street"/>
+												</div>
+											</div>
+											<div class="col-sm-12 mt">
+												<section>
+													<label for="class">Phone</label>
+													<input type="text" class="form-control" id="phone" placeholder="555-555-5555"/>
+												</section>
+											</div>
+											<div class="col-sm-12 mt">
+												<section>
+													<label for="class">Message</label>
+													<input type="text" class="form-control" id="message" placeholder="55 Smith Street"/>
+												</section>
+											</div>
+
+											<div class="col-xs-12">
+												<input type="submit" class="btn btn-primary btn-block" value="On My Way!">
+											</div>
+										</form>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="animate-box" id="heading">
+								<div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
+									<h2>Let friends know where you are!</h2>
+									<h3>Anywhere, Anytime</h3>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+	<!-- Google Maps API -->
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV9t-be0B-1-bVpY4Lvc26O8_qLKEi2Gw&callback=initMap">
+	</script>
+
+</body>
+</html>
