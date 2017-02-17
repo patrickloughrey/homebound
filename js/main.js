@@ -1,30 +1,30 @@
 // Twilio Credentials
 var accountSid = 'AC253122f14819aa08f57e732f9ef0ea62';
 var authToken = '543eb46428cccfcf3f68af5bf078f5a6';
-var twilio = require('twilio');
-var client = new twilio.RestClient(accountSid, authToken);
-var map;
 
 
-function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {
-            lat: -34.397,
-            lng: 150.644
-        },
-        zoom: 8
-    });
-};
+//require the Twilio module and create a REST client 
+var client = require('twilio')(accountSid, authToken); 
+ 
+//When sending SMS with Twilio, the 'to:' phone number must be verified in Twilio while in Trial Mode
+client.messages.create({ 
+    to: "+18482996673", 
+    from: "+18483730521", 
+    body: "Testing"
+}, function(err, message) { 
+    console.log(message.sid); 
+});
 
+
+// JQuery variables to retrieve user input
+var phone = $('#phone').val();
+var message = $('#message').val();
+var origin = $('#origin').val();
+var dest = $('#destination').val();
 
 $(".submit").click(e => {
 
     e.preventDefault();
-
-    var origin = $("#origin").val();
-    var dest = $("#destination").val();
-    var phone = $('#phone').val();
-    var message = $('#message').val();
 
     var service = new google.maps.DistanceMatrixService();
 
@@ -43,27 +43,7 @@ $(".submit").click(e => {
         var duration = response.rows[0].elements[0].duration.text
         console.log(duration)
 
-    });
+    })
 
 });
-
-//Create Twilio REST API client 
-client.sms.messages.create({
-    to: phone,
-    from: '+8733730521',
-    body: message
-
-}, function(error, message) {
-        if(!error) {
-            console.log("Success! The SID for this SMS Message is: ");
-            console.log(message.sid);
-            console.log('Message sent on: ');
-            console.log(message.dateCreated);
-
-        } else {
-            console.log('Oops! There was an error!');
-        }
-
-});
-
 
